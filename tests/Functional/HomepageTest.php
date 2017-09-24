@@ -23,7 +23,7 @@ class HomepageTest extends BaseTestCase
     {
         $response = $this->runApp('POST', '/', ['test']);
 
-        $this->assertEquals(406, $response->getStatusCode());
+        $this->assertEquals(405, $response->getStatusCode());
         $this->assertContains('Method not allowed', (string)$response->getBody());
     }
 }
